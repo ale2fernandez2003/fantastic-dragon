@@ -9,44 +9,52 @@
 public class ComprobadorDeMultiplos
 {
     public boolean esMultiploDe2 (int a){
-        if (a<2){
-            return false;
+        boolean esMultiploDe2;
+        int resultado = a % 2;
+        if (a >= 2) {
+            if (resultado == 0) {
+                esMultiploDe2 = true;
+            }
+            else{
+                esMultiploDe2 = false;
+            }
         }
-        if (a%2==0){
-            return true;
+        else{
+            esMultiploDe2 = false;
         }
-        else {
-            return false;
-        }
+        return esMultiploDe2;
     }
-
-    public boolean esMultiploDe5 (int b){
-        if (b<5){
-            return false;
+    
+    public boolean esMultiploDe5 (int a) {
+         boolean esMultiploDe5;
+        int resultado = a % 5;
+        if (a >= 5) {
+            if (resultado == 0) {
+                esMultiploDe5 = true;
+            }
+            else{
+                esMultiploDe5 = false;
+            }
         }
-        
-        if (b%5==0){
-            return true;
+        else{
+            esMultiploDe5 = false;
         }
-        else {
-            return false;
-        }
+        return esMultiploDe5;
     }
-
-    public boolean esMultiploDe (int a, int b){
-        if (b<=0){
-            return false;
+    
+    public boolean esMultiploDe (int a, int b) {
+         boolean esMultiploDe;
+        if (a < b || b == 0 || a < 0 || b < 0) {
+            esMultiploDe = false;
         }
-        
-        if (a<b){
-            return false;
+        else{
+            if (a % b == 0) {
+                esMultiploDe = true;
+            }
+            else {
+                esMultiploDe = false;
+            }
         }
-        
-        if (a%b==0){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return esMultiploDe;
     }
 }

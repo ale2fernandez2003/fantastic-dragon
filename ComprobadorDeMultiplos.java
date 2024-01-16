@@ -9,14 +9,44 @@
 public class ComprobadorDeMultiplos
 {
     public boolean esMultiploDe2 (int a){
-        return true;
+        if (a<2){
+            return false;
+        }
+        if (a%2==0){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean esMultiploDe5 (int b){
-        return true;
+        if (b<5){
+            return false;
+        }
+        
+        if (b%5==0){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean esMultiploDe (int a, int b){
-        return true;
+        if (b<=0){
+            return false;
+        }
+        
+        if (a<b){
+            return false;
+        }
+        
+        if (a%b==0){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
